@@ -11,6 +11,7 @@ declare namespace ReactMarkdownEditorLite {
         menu: boolean;
         md: boolean;
         html: boolean;
+        toolbar: boolean;
       },
       logger?: {
         interval: number;
