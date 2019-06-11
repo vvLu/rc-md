@@ -159,7 +159,6 @@ class MdEditor extends React.Component {
   }
 
   initConfig() {
-    console.log(_config, this.props.config)
     return { ..._config, ...this.props.config }
   }
 
@@ -562,7 +561,6 @@ class MdEditor extends React.Component {
           </section>)
       }
       if (view.html) {
-        console.log(view)
         res.push(
           <section className={'sec-html'} key="html">
             {view.toolbar &&<ToolBar style={{ right: '20px' }}>

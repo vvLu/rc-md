@@ -14,9 +14,9 @@ class Demo extends React.Component {
 
   mdit = null
 
+
   constructor(props) {
     super(props)
-
     this.mdit = new MarkdownIt({
       html: true,
       linkify: true,
@@ -24,11 +24,11 @@ class Demo extends React.Component {
     })
   }
 
-  handleEditorChange({ html, text }) {
-    // console.log('handleEditorChange', text)
+  handleEditorChange = ({ html, text }) =>{
+    console.log('handleEditorChange', text)
   }
 
-  handleImageUpload(file, callback) {
+  handleImageUpload =(file, callback) => {
     const reader = new FileReader()
     reader.onload = () => {
       const convertBase64UrlToBlob = (urlData) => {
@@ -51,13 +51,13 @@ class Demo extends React.Component {
     reader.readAsDataURL(file)
   }
 
-  handleGetMdValue() {
+  handleGetMdValue =()=> {
     if (this.mdEditor) {
       alert(this.mdEditor.getMdValue())
     }
   }
 
-  handleGetHtmlValue() {
+  handleGetHtmlValue =() => {
     if (this.mdEditor) {
       alert(this.mdEditor.getHtmlValue())
     }
@@ -82,7 +82,7 @@ class Demo extends React.Component {
                 menu: false,
                 md: false,
                 html: true,
-                toolbar: false
+                toolbar: true
               },
               table: {
                 maxRow: 5,

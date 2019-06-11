@@ -7,7 +7,7 @@ const version = require("./package.json").version;
 const banner =
   "/**\n" +
   " * react-markdown-editor-lite v" + version + "\n" +
-  " * https://github.com/HarryChen0506/react-markdown-editor-lite\n" +
+  " * https://github.com/vvLu/rc-md\n" +
   " * MIT License\n" +
   " */\n";
 const config = {
